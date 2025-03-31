@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+#nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 25px 0 0 0;
+}
+
+.logo {
+    margin-right: 50px;
+}
+
+.firstLinks ul {
+    display: flex;
+    gap: 25px;
+}
+
+.lastItems {
+    margin-left: 150px;
+}
+
+.lastItems ul {
+    display: flex;
+    gap: 25px;
+}
+
+.firstLinks a, .lastItems a {
+    color: #7f7f7f;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+a:hover {
+    color: white;
+}
+
+/* MAIN */
+
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.info {
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    background: linear-gradient(to right, #d1d1d1, #818181);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.spanH1 {
+    width: 100%;
+    padding: 0 160px;
+}
+
+.info p {
+    color: #8d8c8c;
+    font-size: 22px;
+    padding: 0 0 0 140px;
+}
+
+/* RECUADROS */
+
+#second {
+    display: grid;
+    place-content: center;
+    width: 100vw;
+}
+
+.recuadros {
+    top: 50rem;
+    display: flex;
+    margin-top: 100px;
+    user-select: none;
+}
+
+.recuadro1, .recuadro2, .recuadro3 {
+    width: 400px;
+    height: 350px;
+    border-radius: 10px;
+    border: 2px solid #131316;
+    background: linear-gradient(to bottom, #111216, transparent 80%);
+    padding: 20px 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.recuadro2, .recuadro3 {
+    margin-left: 50px;
+}
+.recuadro1 span, .recuadro2 span, .recuadro3 span {
+    background-color: linear-gradient(to right, #eaeaed, #c4c4c7);
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.recuadro1 .parahpInfo, .recuadro2 .parahpInfo, .recuadro3 .parahpInfo {
+    color: #989899;
+    font-size: 18px;
+}
+
+.imageAnimation {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+    transition: transform 0.1s linear;
+}
+
+.principalIMAGE {
+    display: flex;
+    justify-content: center;
+}
+
+.principalIMAGE img {
+    width: 500px;
+    height: 500px;
+}
+
+#grid-section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 24px;
+    width: 80vw;
+    max-width: 80vw;
+    height: 800px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 250px;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.item-7 {
+    grid-column: span 3;
+    grid-row: span 4;
+    overflow: hidden;
+}
+
+.item-7 img {
+}
+
+.item-8 {
+    grid-column: 1 / span 2;
+    grid-row: 5 / span 3;
+    overflow: hidden;
+}
+
+.item-9 {
+    grid-column: 4 / span 2;
+    grid-row: 1 / span 4;
+    overflow: hidden;
+}
+
+.item-10 {
+    grid-column: 6 / span 2;
+    grid-row: 1 / span 4;
+    overflow: hidden;
+}
+
+.item-11 {
+    grid-column: 3 / span 2;
+    grid-row: 5 / span 3;
+    overflow: hidden;
+}
+
+.item-12 {
+    grid-column: 5 / span 3;
+    grid-row: 5 / span 3;
+    overflow: hidden;
+}
+
+.item-13 {
+    grid-column: 1 / span 7;
+    grid-row: 8 / span 2;
+    overflow: hidden;
+}  
