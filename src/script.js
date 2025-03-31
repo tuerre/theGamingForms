@@ -1,3 +1,6 @@
+const items = document.querySelectorAll('.item');
+const backgrounds = document.querySelectorAll('.bg-hoverITEM');
+
 document.querySelectorAll(".recuadroAnimated").forEach(contenedor => {
     const img = contenedor.querySelector(".imageAnimation");
     if (!img) return; // Si no hay imagen, continuar con el siguiente
@@ -29,4 +32,24 @@ document.querySelectorAll(".recuadroAnimated").forEach(contenedor => {
     }
 
     moverImagen(); // Iniciar animación para cada imagen
+});
+
+items.forEach((item, index) => {
+    item.addEventListener('mouseover', () => {
+        if (backgrounds[index]) {
+            backgrounds[index].style.opacity = '1';
+        }
+    });
+
+    item.addEventListener('mouseout', () => {
+        if (backgrounds[index]) {
+            backgrounds[index].style.opacity = '0';
+        }
+    });
+});
+
+items.forEach((items) => {
+    items.addEventListener('click', () => {
+        // abrir menú del fomrulario
+    });
 });
