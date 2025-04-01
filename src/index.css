@@ -275,3 +275,18 @@ h1 {
     color: white;
     z-index: 2;
 }
+
+/* MODALES */
+
+.openModal {
+    background-color: #161615;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border-radius: 10px;
+    margin-left: 21.5%;
+    width: 35.5em;
+    height: 47.5em;
+    z-index: 999;
+}
