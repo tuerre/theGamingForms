@@ -1,5 +1,10 @@
 const items = document.querySelectorAll('.item');
 const backgrounds = document.querySelectorAll('.bg-hoverITEM');
+let openModalIsOpen = false;
+const allModalVeladaIV = document.querySelector('.openModal');
+const veladaIVContainer = document.querySelector('.svgOpen');
+const closeveladaIVContainer = document.getElementById('svgCloseVeladaIV');
+const modalOverlay = document.querySelector('.overlay');
 
 document.querySelectorAll(".recuadroAnimated").forEach(contenedor => {
     const img = contenedor.querySelector(".imageAnimation");
@@ -50,6 +55,29 @@ items.forEach((item, index) => {
 
 items.forEach((items) => {
     items.addEventListener('click', () => {
-        // abrir menú del fomrulario
     });
 });
+
+veladaIVContainer.addEventListener('click', () => {
+    if (!openModalIsOpen) {
+        allModalVeladaIV.style.display = 'flex';
+        allModalVeladaIV.style.opacity = '1';
+        modalOverlay.style.opacity = '1';
+        modalOverlay.style.display = 'flex';
+        openModalIsOpen = true;
+    } else {
+        allModalVeladaIV.style.display = 'none';
+        allModalVeladaIV.style.opacity = '0';
+        modalOverlay.style.opacity = '0';
+        modalOverlay.style.display = 'none';
+        openModalIsOpen = false;
+    }
+});
+
+closeveladaIVContainer.addEventListener('click', () => {
+    allModalVeladaIV.style.display = 'none';
+    allModalVeladaIV.style.opacity = '0';
+    modalOverlay.style.opacity = '0';
+    modalOverlay.style.display = 'none';
+    openModalIsOpen = false;
+})

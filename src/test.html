@@ -3,115 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario Completo</title>
+    <title>Modal Animado</title>
     <style>
+        /* Estilos generales */
         body {
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f4f4f4;
+            background-color: rgba(0, 0, 0, 0.1);
         }
-        .form-container {
-            background-color: #ffffff;
+
+        /* Botón para abrir el modal */
+        .open-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+
+        /* Fondo oscuro cuando el modal está abierto */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        /* Modal */
+        .modal {
+            background: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 300px;
-        }
-        .form-container h2 {
             text-align: center;
+            transform: scale(0.8);
+            opacity: 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
         }
-        .form-group {
-            margin-bottom: 15px;
+
+        /* Cuando el modal está activo */
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
         }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
+
+        .overlay.active .modal {
+            transform: scale(1);
+            opacity: 1;
         }
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .form-group button {
-            width: 100%;
-            padding: 10px;
-            background-color: #28a745;
+
+        /* Botón para cerrar */
+        .close-btn {
+            margin-top: 15px;
+            padding: 8px 15px;
+            background: red;
             color: white;
             border: none;
-            border-radius: 5px;
             cursor: pointer;
-        }
-        .success-message {
-            display: none;
-            margin-top: 15px;
-            padding: 10px;
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
             border-radius: 5px;
-            text-align: center;
         }
+
     </style>
 </head>
 <body>
-    <div class="form-container">
-        <h2>Formulario</h2>
-        <form id="myForm">
-            <div class="form-group">
-                <label for="text">Texto:</label>
-                <input type="text" id="text" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Contraseña:</label>
-                <input type="password" id="password" required>
-            </div>
-            <div class="form-group">
-                <label for="number">Número:</label>
-                <input type="number" id="number">
-            </div>
-            <div class="form-group">
-                <label for="date">Fecha:</label>
-                <input type="date" id="date">
-            </div>
-            <div class="form-group">
-                <label for="color">Color:</label>
-                <input type="color" id="color">
-            </div>
-            <div class="form-group">
-                <label for="file">Archivo:</label>
-                <input type="file" id="file">
-            </div>
-            <div class="form-group">
-                <label for="select">Seleccionar:</label>
-                <select id="select">
-                    <option value="opcion1">Opción 1</option>
-                    <option value="opcion2">Opción 2</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="textarea">Área de texto:</label>
-                <textarea id="textarea" rows="3"></textarea>
-            </div>
-            <div class="form-group">
-                <button type="submit">Enviar</button>
-            </div>
-        </form>
-        <div id="successMessage" class="success-message">¡Datos enviados exitosamente!</div>
+
+    <button class="open-btn">Abrir Modal</button>
+
+    <div class="overlay" id="modalOverlay">
+        <div class="modal">
+            <p>Este es un modal con animación.</p>
+            <button class="close-btn">Cerrar</button>
+        </div>
     </div>
 
     <script>
-        document.getElementById("myForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            document.getElementById("successMessage").style.display = "block";
+        const openBtn = document.querySelector('.open-btn');
+        const closeBtn = document.querySelector('.close-btn');
+        const overlay = document.getElementById('modalOverlay');
+
+        openBtn.addEventListener('click', () => {
+            overlay.classList.add('active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            overlay.classList.remove('active');
+        });
+
+        // Cerrar modal si se hace clic fuera
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                overlay.classList.remove('active');
+            }
         });
     </script>
+
 </body>
 </html>

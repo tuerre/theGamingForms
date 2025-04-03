@@ -85,6 +85,7 @@
     </section>
 
     <section id="grid-section">
+        <div class="heighHeight">
         <div class="grid-container">
             <div class="item item-7">
                 <div class="bg-hoverITEM">
@@ -94,53 +95,62 @@
                 </div>
             </div>
 
+            <div class="overlay" id="modalOverlay"></div>
             <div class="openModal" id="modal-velada4">
-                <div class="textInfoModal">
-                    <h2>Valada del Año IV</h2>
-                    <span>Apúntate como boxeador para la Velada del Año IV</span>
+                <div class="headerImageModal">
+                    <img src="/static/veladaBackground.jpg" alt="Header Image">
                 </div>
-
-                <div class="svgClose">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 19"><path fill="currentColor" fill-rule="evenodd" d="M10 1.5a1 1 0 1 0-2 0v7H1a1 1 0 1 0 0 2h7v7a1 1 0 1 0 2 0v-7h7a1 1 0 1 0 0-2h-7z" clip-rule="evenodd"></path></svg>
+                <div class="allformANDmodal">
+                    <div class="textInfoModal">
+                        <h2>Valada del Año IV</h2>
+                        <span>Apúntate como boxeador para la Velada del Año IV</span>
+                    </div>
+    
+                    <div class="svgClose">
+                        <svg id="svgCloseVeladaIV" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 19"><path fill="currentColor" fill-rule="evenodd" d="M10 1.5a1 1 0 1 0-2 0v7H1a1 1 0 1 0 0 2h7v7a1 1 0 1 0 2 0v-7h7a1 1 0 1 0 0-2h-7z" clip-rule="evenodd"></path></svg>
+                    </div>
+    
+                    <form action="" class="formulario">
+                        <div class="form-group">
+                            <input type="text" id="nombre" placeholder="Nombre Completo" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Correo Electrónico" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <input type="number" id="age" placeholder="Edad" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <input type="text" id="direccion" placeholder="Dirección" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder="Teléfono" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <input type="file" id="fisico" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <input type="color" id="color" required>
+                        </div>
+    
+                        <div class="form-group reclutation">
+                            <select id="select">
+                                <option value="opcion1">Boxeador</option>
+                                <option value="opcion2">Caster</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group buttonSend">
+                            <button type="submit">Enviar Postulación</button>
+                        </div>
+                    </form>
                 </div>
-
-                <form action="" class="formulario">
-                    <div class="form-group">
-                        <input type="text" id="nombre" placeholder="Nombre Completo" required>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="Correo Electrónico" required>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="number" id="age" placeholder="Edad" required>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="text" id="direccion" placeholder="Dirección" required>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="tel" id="phone" placeholder="Teléfono" required>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="file" id="fisico" required>
-                    </div>
-
-                    <div class="form-group reclutation">
-                        <label for="select">Reclutación:</label>
-                        <select id="select">
-                            <option value="opcion1">Boxeador</option>
-                            <option value="opcion2">Caster</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <button type="submit">Enviar Postulación</button>
-                    </div>
-                </form>
             </div>
 
             <div class="item item-8">
@@ -190,6 +200,9 @@
                 </div>
             </div>
         </div>
+        </div>
+    </div>
+
     </section>
 
     <footer></footer>
