@@ -4,7 +4,7 @@
     font-family: "ATOMIC";
     src:
     local("ATOMIC"),
-    url("/public/fonts/Set\ Sail\ Studios\ -\ Atomic\ Marker\ Regular.otf") format("opentype");
+    url("/public/fonts/SetSail-Regular.otf") format("opentype");
     display: swap;
 }
 
