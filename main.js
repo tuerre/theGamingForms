@@ -120,6 +120,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="form-group">
                         <label for="roulette-hour">Hora de entrada</label>
                         <input type="time" id="roulette-hour" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="roulette-password">Contraseña</label>
+                        <input type="password" id="roulette-password" required placeholder="Contraseña para participar en la ruleta rusa">
+                    </div>
+                    <div class="form-group">
+                        <label for="roulette-checkbox">¿Confirmas que eres mayor de edad?</label>
+                        <input type="checkbox" id="roulette-checkbox" required checked>
                     </div>`;
                 break;
             case '6': // Imagen en pantalla
