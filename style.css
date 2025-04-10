@@ -41,7 +41,7 @@ body {
     top: 0;
     left: 0;
     opacity: .05;
-    background-image: url(/src/bg.jpg);
+    background-image: url(/src/bg.webp);
     background-size: cover;
     width: 100%;
     height: 100%;
