@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const formContainer = document.querySelector('#purchaseForm');
 
     let scrollAmount = 0;
-    const slideWidth = slides[0].offsetWidth + 20; // Including gap
+    const slideWidth = slides[0].offsetWidth + 10; // Including gap
     const maxScroll = (slides.length - 3) * slideWidth;
 
     // Slider Navigation

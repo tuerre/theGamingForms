@@ -459,3 +459,12 @@ body {
   }
   
 
+@media screen and (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    slider {
+        max-width: 80%;
+    }
+}
