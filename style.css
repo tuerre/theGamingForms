@@ -33,7 +33,7 @@ body {
     align-items: center;
     padding: 2rem;
     padding-top: 70px;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .bgOpacity {
@@ -460,11 +460,8 @@ body {
   
 
 @media screen and (max-width: 768px) {
-    body {
-        padding: 15px;
-    }
 
-    slider {
-        max-width: 80%;
+    .slider {
+        flex-direction: column;
     }
 }
