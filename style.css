@@ -464,4 +464,16 @@ body {
     .slider {
         flex-direction: column;
     }
+    
+    .prev-btn {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .next-btn {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+    }
 }
